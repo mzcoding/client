@@ -1,0 +1,45 @@
+{
+    "name": "stanislavboyko/client",
+    "description": "Laravel Dadadta example client",
+    "homepage": "https://mzcoding.com/",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "stanislavboyko",
+            "email": "s.boyko@app-smart.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Mzcoding\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mzcoding\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+    	"php": ">=7.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "vlucas/phpdotenv": "^3.6",
+        "orchestra/testbench": "^4.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mzcoding\\Laravel\\ClientServiceProvider"
+            ],
+            "aliases": {
+                "MzcodingClient": "Mzcoding\\Laravel\\ClientFacade"
+            }
+        }
+    }
+}
